@@ -5,13 +5,14 @@ local RunService = game:GetService("RunService")
 local LocalPlayer = game:GetService("Players").LocalPlayer
 local Mouse = LocalPlayer:GetMouse()
 local HttpService = game:GetService("HttpService")
+local workspace = "paradox.discord"
 local pfp
 local user
 local tag
 local userinfo = {}
 
 pcall(function()
-	userinfo = HttpService:JSONDecode(readfile("cruisegui.paradox"));
+	userinfo = HttpService:JSONDecode(readfile(workspace));
 end)
 
 pfp = userinfo["pfp"] or "https://www.roblox.com/headshot-thumbnail/image?userId=".. game.Players.LocalPlayer.UserId .."&width=420&height=420&format=png"
@@ -22,7 +23,7 @@ local function SaveInfo()
 	userinfo["pfp"] = pfp
 	userinfo["user"] = user
 	userinfo["tag"] = tag
-	writefile("cruisegui.paradox", HttpService:JSONEncode(userinfo));
+	writefile(workspace, HttpService:JSONEncode(userinfo));
 end
 
 local function MakeDraggable(topbarobject, object)
@@ -1118,7 +1119,7 @@ function DiscordLib:Window(text)
 	DiscordInfo.Position = UDim2.new(0.304721028, 0, 0.821333349, 0)
 	DiscordInfo.Size = UDim2.new(0, 133, 0, 44)
 	DiscordInfo.Font = Enum.Font.Gotham
-	DiscordInfo.Text = "Stable 1.94.2 (00001)  Host 0.0.0.1                Cruise Gui    "
+	DiscordInfo.Text = "Stable 1.94.2 (00001)  Host 0.0.0.1                Roblox Lua Engine    "
 	DiscordInfo.TextColor3 = Color3.fromRGB(101, 108, 116)
 	DiscordInfo.TextSize = 13.000
 	DiscordInfo.TextWrapped = true
