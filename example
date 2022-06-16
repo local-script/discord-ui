@@ -66,11 +66,11 @@ lbls:Label("This is just a label.")
 local bnds = serv:Channel("Binds")
 
 bnds:Bind("Kill bind", Enum.KeyCode.RightShift, function()
-print("Killed everyone!")
+    print("Killed everyone!")
 end)
 
 serv:Channel("by dawid#7205")
 
-lbls:Label("Fixed by hecker#7777")
+serv:Channel("by hecker#7777")
 
 win:Server("Main", "http://www.roblox.com/asset/?id=6031075938")
