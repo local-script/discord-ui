@@ -1,3 +1,3 @@
-# Cruise Gui v1.5
+cruise gui
 
-Cruise gui was made by hecker#7777
+hecker#7777, sentinel#5276
